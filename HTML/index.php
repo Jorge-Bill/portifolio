@@ -55,7 +55,8 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>	
+	<body>
+		<?php include_once("php/analyticstracking.php") ?>	
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
@@ -189,7 +190,7 @@
 				</div>
 				<ul class="social-icons custom-social-icons">
 					<li class="social-icons-facebook">
-						<a href="http://www.facebook.com/" target="_blank" title="Facebook">
+						<a href="https://www.facebook.com/jorgebill.silva" target="_blank" title="Facebook">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
@@ -438,7 +439,7 @@
 									<span>PHP</span>
 								</div>
 								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="80%" data-appear-animation-delay="300"></div>
+									<div class="progress-bar" data-appear-progress-animation="70%" data-appear-animation-delay="300"></div>
 								</div>
 								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
 									<span>MySQL</span>
@@ -460,7 +461,7 @@
 									<span>Javascript</span>
 								</div>
 								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="60%"></div>
+									<div class="progress-bar" data-appear-progress-animation="70%"></div>
 								</div>
 								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
 									<span>GIT</span>
@@ -512,7 +513,7 @@
 							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">Portfólio</h2>
 							<ul class="nav nav-pills sort-source custom-nav-sort mb-xlg" data-sort-id="portfolio" data-option-key="filter">
 								<!-- <li data-option-value="*" class="active"><a href="#">Show All</a></li> -->
-								<li data-option-value=".websites"><a href="#">Websites</a></li>
+								<li data-option-value=".websites" class="active"><a href="#">Websites</a></li>
 								<!-- <li data-option-value=".logos"><a href="#">Logos</a></li> -->
 								<!-- <li data-option-value=".brands"><a href="#">Brands</a></li> -->
 							</ul>
@@ -886,7 +887,7 @@
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
-
+		
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
