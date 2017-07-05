@@ -5,7 +5,7 @@ require_once('php/simple-php-captcha/simple-php-captcha.php');
 require_once('php/php-mailer/PHPMailerAutoload.php');
 
 // Step 1 - Enter your email address below.
-$email = 'you@domain.com';
+$email = 'jorge.mendesx@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
@@ -115,7 +115,7 @@ if(isset($_POST['emailSent'])) {
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Contact Us Advanced | Porto - Responsive HTML5 Template 5.7.2</title>	
+		<title>Contato | Jorge Web Dev</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
