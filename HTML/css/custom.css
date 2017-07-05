@@ -1,1 +1,11 @@
 /* Add here all your CSS customizations */
+.navbar-default{
+	background-color: #fff;
+	/* border-bottom: transparent;  */
+}
+.navbar-default a {
+	font-weight: 200;
+}
+.body{
+	padding-top: 51px;
+}
