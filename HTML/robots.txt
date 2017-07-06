@@ -9,4 +9,4 @@ Disallow: 					/php/
 Disallow: 					/documentos/
 Allow: 			
 
-Sitemap: http://www.jorgemendes.com.br/sitemap_index.xml  
+Sitemap: http://www.jorgemendes.com.br/sitemap.xml  

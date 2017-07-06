@@ -12,24 +12,19 @@
 		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
 		<meta name="author" content="jorge">
 
-		<!-- Facebook -->
+		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
-
 		<meta property="og:url" content="http://www.jorgemendes.com.br">
-
 		<meta property="og:title" content="Jorge Mendes | Desenvolvedor Web ">
 		<meta property="og:site_name" content="Jorge Mendes">
-
 		<meta property="og:description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
-
 		<meta property="og:image" content="www.jorgemendes.com.br/img/social.jpg">
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:image:width" content="800"> 
 		<meta property="og:image:height" content="600"> 
-
 		<!-- SITE NORMAL -->
 		<meta property="og:type" content="website">
-		<!-- Facebook -->
+		<!-- Social -->
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
@@ -179,7 +174,7 @@
 
 			<div role="main" class="main">
 
-			<section id="about-me" class="section section-no-border section-parallax custom-section-padding-1 custom-position-1 custom-xs-bg-size-cover m-none" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="#" style="background-color: #ecf1f7;">
+			<section id="about-me" class="section section-no-border section-parallax custom-section-padding-1 custom-position-1 custom-xs-bg-size-cover m-none" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="#">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-10 col-sm-offset-0 col-xs-offset-1 custom-sm-margin-bottom-1">
@@ -247,7 +242,7 @@
 							</a>
 						</div>
 						<div class="col-md-3 col-sm-4 center p-none">
-							<a href="Jorge_Mendes_Curriculum.pdf" class="text-decoration-none">
+							<a href="documentos/Jorge_Mendes_Curriculum.pdf" class="text-decoration-none">
 								<span class="custom-nav-button text-color-dark">
 									<i class="icon-cloud-download icons text-color-primary"></i>
 									Download Currículum	

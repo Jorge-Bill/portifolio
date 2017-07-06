@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url> 
+    <loc>http://www.jorgemendes.com.br/index.php</loc> 
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/favicon.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/contato.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/flags.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/img-perfil.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/loading.gif</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/social.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-1.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-1_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-2.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-2_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-3.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-3_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-4.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-4_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-5.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-5_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-6.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-6_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-7.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-7_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-8.jpg</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://jorgemendes.com.br/img/portfolio-8_full.png</image:loc>
+       <image:caption>Cães jogando pôquer</image:caption>
+    </image:image>
+  </url>
+</urlset>
