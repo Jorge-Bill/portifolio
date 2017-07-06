@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<!-- Basic -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
 		<title>Jorge Mendes | Desenvolvedor Web </title>	
 
-		<meta name="keywords" content="Desenvolvedor, Desenvolvimento Web, Criação de sites, HTML5, Javascript, PHP, Front-end " />
-		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
-		<meta name="author" content="jorge">
-
 		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
+		<!-- SITE NORMAL -->
 		<meta property="og:url" content="http://www.jorgemendes.com.br">
 		<meta property="og:title" content="Jorge Mendes | Desenvolvedor Web ">
 		<meta property="og:site_name" content="Jorge Mendes">
 		<meta property="og:description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
-		<meta property="og:image" content="www.jorgemendes.com.br/img/social.jpg">
-		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image" content="http://www.jorgemendes.com.br/img/social.jpg">
+		<meta property="og:image:type" content="image/jpg">
 		<meta property="og:image:width" content="800"> 
 		<meta property="og:image:height" content="600"> 
-		<!-- SITE NORMAL -->
 		<meta property="og:type" content="website">
-		<!-- Social -->
+		
+		<meta name="keywords" content="Desenvolvedor, Desenvolvimento Web, Criação de sites, HTML5, Javascript, PHP, Front-end " />
+		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
+		<meta name="author" content="jorge">
 
+
+
+		<!-- Social -->
+		<!-- browser -->
+		<meta name="theme-color" content="#FFD93E"> <!-- Chrome -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#FFD93E"> <!-- IOS -->
+		<meta name="msapplication-navbutton-color" content="#FFD93E"> <!-- WinPhone -->
+		<!-- browser -->
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 		<!-- <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> -->
@@ -242,7 +248,7 @@
 							</a>
 						</div>
 						<div class="col-md-3 col-sm-4 center p-none">
-							<a href="documentos/Jorge_Mendes_Curriculum.pdf" class="text-decoration-none">
+							<a target="_blank" href="documentos/Jorge_Mendes_Curriculum.pdf" class="text-decoration-none">
 								<span class="custom-nav-button text-color-dark">
 									<i class="icon-cloud-download icons text-color-primary"></i>
 									Download Currículum	
@@ -282,10 +288,10 @@
 											<span class="text-color-dark">Linkedin:</span>
 											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="https://www.linkedin.com/in/jorge-mendes-83a572a7">Jorge Mendes</a></span>
 										</li>
-										<!-- <li>
+										<li>
 											<span class="text-color-dark">GitHub:</span>
-											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="https://github.com/Jorge-Bill">Jorge</a></span>
-										</li> -->
+											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="https://github.com/Jorge-Bill">Meus projetos</a></span>
+										</li>
 										<li>
 											<span class="text-color-dark">E-mail:</span>
 											<span class="custom-text-color-2"><a style="font-size: 9px;text-decoration: none;" class="custom-text-color-2" href="mailto:jorge.mendesx@gmail.com">jorge.mendesx@gmail.com</a></span>
@@ -841,7 +847,7 @@
 												<strong class="font-weight-light text-color-light custom-opacity-effect-1">Instagram</strong>
 											</span>
 										</a>
-										<a target="_blank" href="https://github.com/Jorge-Bill/" class="text-decoration-none">
+										<a target="_blank" href="https://github.com/Jorge-Bill/" class="text-decoration-none hidden-sm hidden-xs">
 											<span class="feature-box-info p-none">
 												<strong class="font-weight-light text-color-light custom-opacity-effect-1">GitHub</strong>
 											</span>
