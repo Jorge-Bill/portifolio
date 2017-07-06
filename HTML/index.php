@@ -306,9 +306,9 @@
 							<p class="custom-text-color-2">Tenho contato com T.I, desde os meus doze anos, quando em meu primeiro contato com um computador desktop Semp Toshiba de processador Pentium 4, 256gb de memória Ram e HD de 80 gb, me fascinou e desde então não consegui me distanciar desta área deslumbrante.</p>
 
 							<div class="about-me-more" id="aboutMeMore">
-								<p>Fui realizando pequenos cursos, e em 2010 ingressei no curso técnico em informática, qual me proporcionou trabalhar com ferramentas que me permitiram avançar em conhecimento, com o qual trabalhei como freelancer por cerca de dois anos sem nunca parar de aprimorar minhas habilidades.</p>
-								<p>No ano de dois mil e doze, iniciei minha carreira no estado, me permitindo desenvolver um projeto com os adolescentes da instituição trabalhando com Arduino, utilizando os princípios do kit básico em aplicações primárias permitindo aprendizado de conceitos de física e matemática.</p>
-								<p>Pensando em galgar um nível mais alto busquei uma graduação, escolhi o curso de Sistemas para internet na Faculdade de Tecnologia de São Roque – Fatec, referência na região que detém profissionais de alta referência e know-how, contribuindo para uma melhor compreensão do mercado. </p>
+								<p class="custom-text-color-2">Fui realizando pequenos cursos, e em 2010 ingressei no curso técnico em informática, qual me proporcionou trabalhar com ferramentas que me permitiram avançar em conhecimento, com o qual trabalhei como freelancer por cerca de dois anos sem nunca parar de aprimorar minhas habilidades.</p>
+								<p class="custom-text-color-2">No ano de dois mil e doze, iniciei minha carreira no estado, me permitindo desenvolver um projeto com os adolescentes da instituição trabalhando com Arduino, utilizando os princípios do kit básico em aplicações primárias permitindo aprendizado de conceitos de física e matemática.</p>
+								<p class="custom-text-color-2">Pensando em galgar um nível mais alto busquei uma graduação, escolhi o curso de Sistemas para internet na Faculdade de Tecnologia de São Roque – Fatec, referência na região que detém profissionais de alta referência e know-how, contribuindo para uma melhor compreensão do mercado. </p>
 							</div>
 
 							<a id="aboutMeMoreBtn" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs">Ver Mais</a>
@@ -329,11 +329,11 @@
 										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
 											<span class="from text-color-dark text-uppercase">
 												Dê
-												<span class="font-weight-semibold">Out de 2012</span>
+												<span class="font-weight-semibold">Out/2012</span>
 											</span>
 											<span class="to text-color-dark text-uppercase">
 												Até
-												<span class="font-weight-semibold">Mai de 2016</span>
+												<span class="font-weight-semibold">Mai/2016</span>
 											</span>
 											<p class="text-color-dark">(3 anos 8 meses)</p>
 											<span class="company text-color-dark font-weight-semibold">
@@ -350,11 +350,11 @@
 										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
 											<span class="from text-color-dark text-uppercase">
 												Dê
-												<span class="font-weight-semibold">Nov de 2015</span>
+												<span class="font-weight-semibold">Nov/2015</span>
 											</span>
 											<span class="to text-color-dark text-uppercase">
 												Até
-												<span class="font-weight-semibold">Mai de 2016</span>
+												<span class="font-weight-semibold">Mai/2016</span>
 											</span>
 											<p class="text-color-dark">(7 meses)</p>
 											<span class="company text-color-dark font-weight-semibold">
@@ -371,7 +371,7 @@
 										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
 											<span class="from text-color-dark text-uppercase">
 												Dê
-												<span class="font-weight-semibold">Mai de 2016</span>
+												<span class="font-weight-semibold">Mai/2016</span>
 											</span>
 											<span class="to text-color-dark text-uppercase">
 												Até
@@ -403,7 +403,7 @@
 							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold m-none">Educação</h2>
 							<div class="owl-carousel nav-bottom custom-carousel-style-1 custom-item-padding custom-dots-style-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
 								<div>
-									<div class="col-md-6 col-sm-6">
+									<div class="col-md-4 col-sm-6">
 										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
 											<i class="icon-graduation icons text-color-primary"></i>
 											<h4 class="font-weight-semibold text-color-dark m-none">Fatec São Roque</h4>
@@ -411,7 +411,7 @@
 											<strong class="text-color-primary">2014-2016</strong>
 										</div>
 									</div>
-									<div class="col-md-6 col-sm-6">
+									<div class="col-md-4 col-sm-6">
 										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
 											<i class="icon-graduation icons text-color-primary"></i>
 											<h4 class="font-weight-semibold text-color-dark m-none">Etec São Roque</h4>
@@ -419,9 +419,7 @@
 											<strong class="text-color-primary">2009-2010</strong>
 										</div>
 									</div>
-								</div>
-								<div>
-									<div class="col-md-6 col-sm-6">
+									<div class="col-md-4 col-sm-6">
 										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
 											<i class="icon-graduation icons text-color-primary"></i>
 											<h4 class="font-weight-semibold text-color-dark m-none">E.E Prof Roque Bastos</h4>
@@ -429,14 +427,6 @@
 											<strong class="text-color-primary">2004-2010</strong>
 										</div>
 									</div>
-									<!-- <div class="col-md-6 col-sm-6">
-										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
-											<i class="icon-graduation icons text-color-primary"></i>
-											<h4 class="font-weight-semibold text-color-dark m-none">Porto University</h4>
-											<p class="custom-text-color-2 mb-xs">Master of Information Technology</p>
-											<strong class="text-color-primary">2001-2015</strong>
-										</div>
-									</div> -->
 								</div>
 							</div>
 						</div>
@@ -553,7 +543,7 @@
 												</a>
 											</div>
 										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item logos">
+										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
 											<div class="image-gallery-item">
 												<a href="img/portfolio/portfolio-2_full.png" class="lightbox-portfolio">
 													<span class="thumb-info custom-thumb-info-1">
@@ -565,7 +555,7 @@
 												</a>
 											</div>
 										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item brands">
+										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
 											<div class="image-gallery-item">
 												<a href="img/portfolio/portfolio-3_full.png" class="lightbox-portfolio">
 													<span class="thumb-info custom-thumb-info-1">
