@@ -24,8 +24,6 @@
 		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
 		<meta name="author" content="jorge">
 
-
-
 		<!-- Social -->
 		<!-- browser -->
 		<meta name="theme-color" content="#FFD93E"> <!-- Chrome -->
@@ -79,6 +77,12 @@
 	<body>
 		<?php include_once("php/analyticstracking.php") ?>	
 		<header>
+
+		<div class="page-loader">
+        	<div class="loader"></div>
+        	<img src="img/loading.gif" class="img-loading">
+        </div>
+
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
@@ -91,7 +95,7 @@
 						<!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo, um quadrado amarelo formando um rosto"></a> -->
 					</div>
 					<div class="collapse navbar-collapse navbar-perfil">
-						<ul class="nav navbar-nav">
+						<ul class="nav navbar-nav pull-right">
 							<li><a href="#topo">Home</a></li>
 							<li><a href="#about-me">Sobre</a></li>
 							<li><a href="#experience">Experiência</a></li>
@@ -106,7 +110,7 @@
 			</nav>
 		</header>
 		<div class="body" id="topo">	
-			<!-- <header id="header" class="header-floating " data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickySetTop': '60px', 'stickyChangeLogo': false}">
+			<header id="header" class="header-floating hidden-sm hidden-xs" data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickySetTop': '60px', 'stickyChangeLogo': false}">
 				<div class="header-body">
 					<div class="header-container container">
 						<div class="header-row">
@@ -122,49 +126,49 @@
 													<li>
 														<a data-hash href="#about-me" class="text-color-dark background-color-primary">
 															<i class="icon-home icons"></i>
-															<span class="custom-tooltip">About Me</span>
+															<span class="custom-tooltip">Sobre</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#experience" class="text-color-dark background-color-primary">
 															<i class="icon-eye icons"></i>
-															<span class="custom-tooltip">Experience</span>
+															<span class="custom-tooltip">Experiência</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#education" class="text-color-dark background-color-primary">
 															<i class="icon-briefcase icons"></i>
-															<span class="custom-tooltip">Education</span>
+															<span class="custom-tooltip">Educação</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#skills" class="text-color-dark background-color-primary">
 															<i class="icon-graduation icons"></i>
-															<span class="custom-tooltip">Skills</span>
+															<span class="custom-tooltip">Habilidades</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#portfolio" class="text-color-dark background-color-primary">
 															<i class="icon-diamond icons"></i>
-															<span class="custom-tooltip">Portfolio</span>
+															<span class="custom-tooltip">Portifólio</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#recommendations" class="text-color-dark background-color-primary">
 															<i class="icon-pencil icons"></i>
-															<span class="custom-tooltip">Recommendations</span>
+															<span class="custom-tooltip">Recomendações</span>
 														</a>
 													</li>
-													<li>
+													<!-- <li>
 														<a data-hash href="#blog" class="text-color-dark background-color-primary">
 															<i class="icon-bubbles icons"></i>
 															<span class="custom-tooltip">Blog</span>
 														</a>
-													</li>
+													</li> -->
 													<li>
 														<a data-hash href="#say-hello" class="text-color-dark background-color-primary">
 															<i class="icon-envelope-open icons"></i>
-															<span class="custom-tooltip">Say Hello</span>
+															<span class="custom-tooltip">Diga olá</span>
 														</a>
 													</li>
 												</ul>
@@ -176,7 +180,7 @@
 						</div>
 					</div>
 				</div>
-			</header> -->
+			</header>
 
 			<div role="main" class="main">
 
@@ -864,7 +868,7 @@
 		</div>
 
 		<!-- Vendor -->
-		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/jquery/jquery.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
@@ -878,6 +882,7 @@
 		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
 		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script src="vendor/vide/vide.min.js"></script>
+		<script src="vendor/imagesLoaded/imagesloaded.pkgd.min.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
