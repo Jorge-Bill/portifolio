@@ -1,0 +1,12 @@
+Google: 		User-agent: Googlebot
+Google Imagens: User-agent: Googlebot-images
+Google Adwords: User-agent: Adsbot-Google
+Google Adsense: User-agent: Mediapartners-Google
+Yahoo: 			User-agent: Slurp
+Bing: 			User-agent: Bingbot
+
+Disallow: 					/php/ 
+Disallow: 					/documentos/
+Allow: 			
+
+Sitemap: http://www.jorgemendes.com.br/sitemap_index.xml  

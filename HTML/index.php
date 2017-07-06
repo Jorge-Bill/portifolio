@@ -8,13 +8,33 @@
 
 		<title>Jorge Mendes | Desenvolvedor Web </title>	
 
-		<meta name="keywords" content="HTML5 " />
-		<meta name="description" content="Font-end, Desenvolvimento, Web">
+		<meta name="keywords" content="Desenvolvedor, Desenvolvimento Web, Criação de sites, HTML5, Javascript, PHP, Front-end " />
+		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
 		<meta name="author" content="jorge">
+
+		<!-- Facebook -->
+		<meta property="og:locale" content="pt_BR">
+
+		<meta property="og:url" content="http://www.jorgemendes.com.br">
+
+		<meta property="og:title" content="Jorge Mendes | Desenvolvedor Web ">
+		<meta property="og:site_name" content="Jorge Mendes">
+
+		<meta property="og:description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
+
+		<meta property="og:image" content="www.jorgemendes.com.br/img/social.jpg">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="800"> 
+		<meta property="og:image:height" content="600"> 
+
+		<!-- SITE NORMAL -->
+		<meta property="og:type" content="website">
+		<!-- Facebook -->
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 		<!-- <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> -->
+		<link rel="image_src" href="http://site.com/social.jpg" />
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
