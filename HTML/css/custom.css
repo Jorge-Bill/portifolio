@@ -1,10 +1,11 @@
 /* Add here all your CSS customizations */
 .navbar-default{
-	background-color: #FFD93E;
+	background-color: #61b6f9;
 	/* border-bottom: transparent;  */
 }
 .navbar-default a {
 	font-weight: 200;
+	color: #ffffff !important;
 }
 .body{
 	padding-top: 51px;

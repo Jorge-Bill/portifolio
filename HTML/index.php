@@ -26,9 +26,9 @@
 
 		<!-- Social -->
 		<!-- browser -->
-		<meta name="theme-color" content="#FFD93E"> <!-- Chrome -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="#FFD93E"> <!-- IOS -->
-		<meta name="msapplication-navbutton-color" content="#FFD93E"> <!-- WinPhone -->
+		<meta name="theme-color" content="#61b6f8"> <!-- Chrome -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#61b6f8"> <!-- IOS -->
+		<meta name="msapplication-navbutton-color" content="#61b6f8"> <!-- WinPhone -->
 		<!-- browser -->
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
@@ -95,7 +95,7 @@
 						<!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo, um quadrado amarelo formando um rosto"></a> -->
 					</div>
 					<div class="collapse navbar-collapse navbar-perfil">
-						<ul class="nav navbar-nav pull-right">
+						<ul class="nav navbar-nav">
 							<li><a href="#topo">Home</a></li>
 							<li><a href="#about-me">Sobre</a></li>
 							<li><a href="#experience">Experiência</a></li>
@@ -159,12 +159,6 @@
 															<span class="custom-tooltip">Recomendações</span>
 														</a>
 													</li>
-													<!-- <li>
-														<a data-hash href="#blog" class="text-color-dark background-color-primary">
-															<i class="icon-bubbles icons"></i>
-															<span class="custom-tooltip">Blog</span>
-														</a>
-													</li> -->
 													<li>
 														<a data-hash href="#say-hello" class="text-color-dark background-color-primary">
 															<i class="icon-envelope-open icons"></i>
@@ -298,7 +292,7 @@
 										</li>
 										<li>
 											<span class="text-color-dark">E-mail:</span>
-											<span class="custom-text-color-2"><a style="font-size: 9px;text-decoration: none;" class="custom-text-color-2" href="mailto:jorge.mendesx@gmail.com">jorge.mendesx@gmail.com</a></span>
+											<span class="custom-text-color-2"><a style="font-size: 8px;text-decoration: none;" class="custom-text-color-2" href="mailto:contato@jorgemendes.com.br">contato@jorgemendes.com.br</a></span>
 										</li>
 									</ul>
 								</div>
@@ -771,16 +765,19 @@
 							<div class="row m-none">
 								<div class="col-half-section col-half-section-right mr-md">
 									<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Diga olá</h2>
-									<form id="callSendMessage" class="custom-form-style" action="#" method="POST">
+									<form id="callSendMessage" class="custom-form-style" action="php/enviar-email.php" method="POST">
 										<div class="form-content">
 											<div class="form-control-custom">
-												<input type="text" class="form-control" name="callName" placeholder="Nome *" data-msg-required="Campo Obrigatório" id="callName" required="" />
+												<input type="text" class="form-control" name="nome" placeholder="Nome *" data-msg-required="Campo Obrigatório" id="nome" required="" />
 											</div>
 											<div class="form-control-custom">
-												<input type="text" class="form-control" name="callSubject" placeholder="Assunto *" data-msg-required="Campo Obrigatório" id="callSubject" required="" />
+												<input type="text" class="form-control" name="email" placeholder="E-mail *" data-msg-required="Campo Obrigatório" id="email" required="" />
 											</div>
 											<div class="form-control-custom">
-												<textarea maxlength="5000" data-msg-required="Mensagem." rows="10" class="form-control" name="message" placeholder="Mensagem *" id="message" required="" aria-required="true"></textarea>
+												<input type="text" class="form-control" name="assunto" placeholder="Assunto *" data-msg-required="Campo Obrigatório" id="assunto" required="" />
+											</div>
+											<div class="form-control-custom">
+												<textarea maxlength="5000" data-msg-required="Mensagem." rows="10" class="form-control" name="mensagem" placeholder="Mensagem *" id="mensagem" required="" aria-required="true"></textarea>
 											</div>
 											<input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Enviar" />
 										</div>
@@ -800,7 +797,7 @@
 											</span>
 											<span class="feature-box-info">
 												<label class="font-weight-semibold text-uppercase custom-text-color-1">E-mail</label>
-												<strong class="font-weight-light text-color-light custom-opacity-effect-1">jorge.mendesx@gmail.com</strong>
+												<strong class="font-weight-light text-color-light custom-opacity-effect-1">contato@jorgemendes.com.br</strong>
 											</span>
 										</span>
 									</a>
