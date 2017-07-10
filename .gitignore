@@ -2,3 +2,5 @@
 *.pdf
 
 HTML/ftpsync.settings
+
+HTML/php/enviar-email.php

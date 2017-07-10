@@ -103,6 +103,7 @@
 							<li><a href="#skills">Habilidades</a></li>
 							<li><a href="#portfolio">Portifólio</a></li>
 							<li><a href="#recommendations">Recomendações</a></li>
+							<li><a href="#colaboradores">Colaboradores</a></li>
 							<li><a href="#say-hello">Diga olá</a></li>
 						</ul>
 					</div>
@@ -157,6 +158,12 @@
 														<a data-hash href="#recommendations" class="text-color-dark background-color-primary">
 															<i class="icon-pencil icons"></i>
 															<span class="custom-tooltip">Recomendações</span>
+														</a>
+													</li>
+													<li>
+														<a data-hash href="#colaboradores" class="text-color-dark background-color-primary">
+															<i class="icon-people icons"></i>
+															<span class="custom-tooltip">Colaboradores</span>
 														</a>
 													</li>
 													<li>
@@ -671,7 +678,7 @@
 				</div>
 			</section>
 
-			<section class="section section-no-border custom-background-color-1 m-none">
+			<section id="colaboradores" class="section section-no-border custom-background-color-1 m-none">
 				<div class="container">
 					<h2><strong>Colaboradores</strong></h2>
 		
@@ -692,20 +699,18 @@
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item leadership">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
-											<a href="about-me.html">
-												<img src="img/team-1.jpg" class="img-responsive" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">John Doe</span>
-													<span class="thumb-info-type">CEO</span>
-												</span>
-											</a>
+											<img src="img/rapha.jpg" class="img-responsive" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">RAPHAEL PERRIOLLAT</span>
+												<span class="thumb-info-type">Web developer & designer</span>
+											</span>
 										</span>
 										<span class="thumb-info-caption">
-											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
+											<span class="thumb-info-caption-text">Um cara com mais de 2 metros que trocou as quadras por um computador e as jogadas por códigos.</span>
 											<span class="thumb-info-social-icons">
-												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												<a target="_blank" href="https://www.facebook.com/perriollat"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+												<a target="_blank" href="https://twitter.com/raphaperriollat/"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a target="_blank" href="http://perriollat.com/"><i class="fa fa-link"></i><span>Linkedin</span></a>
 											</span>
 										</span>
 									</span>
@@ -713,20 +718,18 @@
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
-											<a href="about-me.html">
-												<img src="img/team-2.jpg" class="img-responsive" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Jessica Doe</span>
-													<span class="thumb-info-type">Marketing</span>
-												</span>
-											</a>
+											<img src="img/team-2.jpg" class="img-responsive" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Parceiro(a)</span>
+												<span class="thumb-info-type">Marketing</span>
+											</span>
 										</span>
 										<span class="thumb-info-caption">
 											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
 											<span class="thumb-info-social-icons">
 												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
 											</span>
 										</span>
 									</span>
@@ -734,20 +737,18 @@
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
-											<a href="about-me.html">
-												<img src="img/team-2.jpg" class="img-responsive" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Jessica Doe</span>
-													<span class="thumb-info-type">Marketing</span>
-												</span>
-											</a>
+											<img src="img/team-2.jpg" class="img-responsive" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Parceiro(a)</span>
+												<span class="thumb-info-type">Marketing</span>
+											</span>
 										</span>
 										<span class="thumb-info-caption">
 											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
 											<span class="thumb-info-social-icons">
 												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
 											</span>
 										</span>
 									</span>
@@ -755,20 +756,18 @@
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
-											<a href="about-me.html">
-												<img src="img/team-2.jpg" class="img-responsive" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Jessica Doe</span>
-													<span class="thumb-info-type">Marketing</span>
-												</span>
-											</a>
+											<img src="img/team-2.jpg" class="img-responsive" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Parceiro(a)</span>
+												<span class="thumb-info-type">Marketing</span>
+											</span>
 										</span>
 										<span class="thumb-info-caption">
 											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
 											<span class="thumb-info-social-icons">
 												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
 											</span>
 										</span>
 									</span>
