@@ -6,7 +6,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
 		<title>Jorge Mendes | Desenvolvedor Web </title>	
-
+		<?php 
+			require_once 'php/link-banco.php';
+			require_once 'php/consultas/detalhes-sobre.php';
+			require_once 'php/consultas/detalhes-experiencia.php';
+			require_once 'php/consultas/detalhes-educacao.php';
+		 ?>
 		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
 		<!-- SITE NORMAL -->
@@ -98,13 +103,13 @@
 						<ul class="nav navbar-nav">
 							<li><a href="#topo">Home</a></li>
 							<li><a href="#about-me">Sobre</a></li>
-							<li><a href="#experience">Experiência</a></li>
-							<li><a href="#education">Educação</a></li>
+							<li><a href="#experience">Experi�ncia</a></li>
+							<li><a href="#education">Educa��o</a></li>
 							<li><a href="#skills">Habilidades</a></li>
-							<li><a href="#portfolio">Portifólio</a></li>
-							<li><a href="#recommendations">Recomendações</a></li>
+							<li><a href="#portfolio">Portif�io</a></li>
+							<li><a href="#recommendations">Recomenda��es</a></li>
 							<li><a href="#colaboradores">Colaboradores</a></li>
-							<li><a href="#say-hello">Diga olá</a></li>
+							<li><a href="#say-hello">Diga ol�</a></li>
 						</ul>
 					</div>
 				</div>
@@ -133,13 +138,13 @@
 													<li>
 														<a data-hash href="#experience" class="text-color-dark background-color-primary">
 															<i class="icon-eye icons"></i>
-															<span class="custom-tooltip">Experiência</span>
+															<span class="custom-tooltip">Experi�ncia</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#education" class="text-color-dark background-color-primary">
 															<i class="icon-briefcase icons"></i>
-															<span class="custom-tooltip">Educação</span>
+															<span class="custom-tooltip">Educa��o</span>
 														</a>
 													</li>
 													<li>
@@ -151,13 +156,13 @@
 													<li>
 														<a data-hash href="#portfolio" class="text-color-dark background-color-primary">
 															<i class="icon-diamond icons"></i>
-															<span class="custom-tooltip">Portifólio</span>
+															<span class="custom-tooltip">Portif�io</span>
 														</a>
 													</li>
 													<li>
 														<a data-hash href="#recommendations" class="text-color-dark background-color-primary">
 															<i class="icon-pencil icons"></i>
-															<span class="custom-tooltip">Recomendações</span>
+															<span class="custom-tooltip">Recomenda��es</span>
 														</a>
 													</li>
 													<li>
@@ -169,7 +174,7 @@
 													<li>
 														<a data-hash href="#say-hello" class="text-color-dark background-color-primary">
 															<i class="icon-envelope-open icons"></i>
-															<span class="custom-tooltip">Diga olá</span>
+															<span class="custom-tooltip">Diga ol�</span>
 														</a>
 													</li>
 												</ul>
@@ -203,8 +208,8 @@
 									<a data-hash href="#experience" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs ml-sm">Ver Mais</a>
 								</span>
 								<span class="custom-text-color-1 text-uppercase">
-									<strong class="text-color-light">Educação: </strong>
-									Fatec São Roque
+									<strong class="text-color-light">Educa��o: </strong>
+									Fatec S�o Roque
 									<a data-hash href="#education" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs ml-sm">Ver Mais</a>
 								</span>
 							</span>
@@ -240,7 +245,7 @@
 							<a data-hash href="#say-hello" class="text-decoration-none">
 								<span class="custom-nav-button text-color-dark">
 									<i class="icon-earphones-alt icons text-color-primary"></i>
-									Informações de Contato	
+									Informa��es de Contato	
 								</span>
 							</a>
 						</div>
@@ -256,7 +261,7 @@
 							<a target="_blank" href="documentos/Jorge_Mendes_Curriculum.pdf" class="text-decoration-none">
 								<span class="custom-nav-button text-color-dark">
 									<i class="icon-cloud-download icons text-color-primary"></i>
-									Download Currículum	
+									Download Curr��culum	
 								</span>
 							</a>
 						</div>
@@ -265,25 +270,25 @@
 			</div>
 
 			<section class="section section-no-border background-color-light m-none">
+				<?php foreach ($detalhes_sobre as $sobre) { ?>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-
 							<div class="custom-box-details background-color-light custom-box-shadow-1 col-md-6 ml-xlg mb-xlg pull-right clearfix">
 								<h4>Detalhes Pessoais</h4>
 								<div class="col-md-6 col-sm-6 p-none">
 									<ul class="custom-list-style-1 p-none">
 										<li>
-											<span class="text-color-dark">Aniversário:</span>
-											<span class="custom-text-color-2">04/06/1993</span>
+											<span class="text-color-dark">Anivers�rio:</span>
+											<span class="custom-text-color-2"><?=date('d/m/Y', strtotime($sobre->aniversario))?></span>
 										</li>
 										<li>
-											<span class="text-color-dark">Estado Cívil:</span>
-											<span class="custom-text-color-2">Solteiro</span>
+											<span class="text-color-dark">Estado C�vil:</span>
+											<span class="custom-text-color-2"><?=ucfirst(strtolower($sobre->estado_civil))?></span>
 										</li>
 										<li>
 											<span class="text-color-dark">Nacionalidade:</span>
-											<span class="custom-text-color-2">Brasileiro</span>
+											<span class="custom-text-color-2"><?=ucfirst(strtolower($sobre->nacionalidade))?></span>
 										</li>
 									</ul>
 								</div>
@@ -291,15 +296,15 @@
 									<ul class="custom-list-style-1 p-none">
 										<li>
 											<span class="text-color-dark">Linkedin:</span>
-											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="https://www.linkedin.com/in/jorge-mendes-83a572a7">Jorge Mendes</a></span>
+											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="<?=ucwords(strtolower($sobre->linkedin));?>">Jorge Mendes</a></span>
 										</li>
 										<li>
 											<span class="text-color-dark">GitHub:</span>
-											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="https://github.com/Jorge-Bill">Meus projetos</a></span>
+											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="<?=ucwords(strtolower($sobre->github));?>">Meus projetos</a></span>
 										</li>
 										<li>
-											<span class="text-color-dark">E-mail:</span>
-											<span class="custom-text-color-2"><a style="font-size: 8px;text-decoration: none;" class="custom-text-color-2" href="mailto:contato@jorgemendes.com.br">contato@jorgemendes.com.br</a></span>
+											<!-- <span class="text-color-dark" style="font-size: 8px">E-mail:</span> -->
+											<span class="custom-text-color-2">E-mail: <a style="font-size:10px;text-decoration: none;" class="custom-text-color-2" href="mailto:<?=ucwords(strtolower($sobre->email));?>">contato@jorgemendes.com.br</a></span>
 										</li>
 									</ul>
 								</div>
@@ -307,97 +312,54 @@
 
 							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">Sobre Mim</h2>
 							
-							<p class="custom-text-color-2">Meu nome é Jorge.</p>
-							<p class="custom-text-color-2">Tenho contato com T.I, desde os meus doze anos, quando em meu primeiro contato com um computador desktop Semp Toshiba de processador Pentium 4, 256gb de memória Ram e HD de 80 gb, me fascinou e desde então não consegui me distanciar desta área deslumbrante.</p>
-
-							<div class="about-me-more" id="aboutMeMore">
-								<p class="custom-text-color-2">Fui realizando pequenos cursos, e em 2010 ingressei no curso técnico em informática, qual me proporcionou trabalhar com ferramentas que me permitiram avançar em conhecimento, com o qual trabalhei como freelancer por cerca de dois anos sem nunca parar de aprimorar minhas habilidades.</p>
-								<p class="custom-text-color-2">No ano de dois mil e doze, iniciei minha carreira no estado, me permitindo desenvolver um projeto com os adolescentes da instituição trabalhando com Arduino, utilizando os princípios do kit básico em aplicações primárias permitindo aprendizado de conceitos de física e matemática.</p>
-								<p class="custom-text-color-2">Pensando em galgar um nível mais alto busquei uma graduação, escolhi o curso de Sistemas para internet na Faculdade de Tecnologia de São Roque – Fatec, referência na região que detém profissionais de alta referência e know-how, contribuindo para uma melhor compreensão do mercado. </p>
-							</div>
+							<?=$sobre->sobre?>
 
 							<a id="aboutMeMoreBtn" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs">Ver Mais</a>
 
 						</div>
 					</div>
 				</div>
+				<?php } ?>
 			</section>
-
+		
 			<section id="experience" class="section section-secondary section-no-border m-none">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Experiência</h2>
+							
+							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Experi�ncia</h2>
 							<section class="timeline custom-timeline" id="timeline">
 								<div class="timeline-body">
+									<?php foreach ($detalhes_exp as $exp) { ?>
 									<article class="timeline-box right custom-box-shadow-2">
 										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
 											<span class="from text-color-dark text-uppercase">
-												Dê
-												<span class="font-weight-semibold">Out/2012</span>
+												D�
+												<span class="font-weight-semibold"><?=date('d/m/Y', strtotime($exp->data_entrada))?></span>
 											</span>
 											<span class="to text-color-dark text-uppercase">
-												Até
-												<span class="font-weight-semibold">Mai/2016</span>
+												At�
+												<span class="font-weight-semibold"><?=date('d/m/Y', strtotime($exp->data_saida))?></span>
 											</span>
-											<p class="text-color-dark">(3 anos 8 meses)</p>
+											<p class="text-color-dark">
+												tempo de perman�ncia</p>
 											<span class="company text-color-dark font-weight-semibold">
-												Secretaria da Educação-SP
+												<?=$exp->localizacao?>
 												<span class="company-location text-color-dark font-weight-normal text-uppercase"></span>
 											</span>
 										</div>
 										<div class="experience-description col-md-9 col-sm-7 match-height background-color-light">
-											<h4 class="text-color-dark font-weight-semibold">Agente Organização Escolar</h4>
-											<p class="custom-text-color-2">Minhas responsabilidades sempre foram cuidar do patrimônio público, estabelecer o contato entre os estudantes e a gestão da escola, resolver os conflitos entre professores e alunos.</p>
+											<h4 class="text-color-dark font-weight-semibold"><?=$exp->funcao?></h4>
+											<p class="custom-text-color-2"><?=$exp->descricao?></p>
 										</div>
 									</article>
-									<article class="timeline-box right custom-box-shadow-2">
-										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
-											<span class="from text-color-dark text-uppercase">
-												Dê
-												<span class="font-weight-semibold">Nov/2015</span>
-											</span>
-											<span class="to text-color-dark text-uppercase">
-												Até
-												<span class="font-weight-semibold">Mai/2016</span>
-											</span>
-											<p class="text-color-dark">(7 meses)</p>
-											<span class="company text-color-dark font-weight-semibold">
-												SRTI
-												<!-- <span class="company-location text-color-dark font-weight-normal text-uppercase"></span> -->
-											</span>
-										</div>
-										<div class="experience-description col-md-9 col-sm-7 match-height background-color-light">
-											<h4 class="text-color-dark font-weight-semibold">Estagiário</h4>
-											<p class="custom-text-color-2">Trabalhei no desenvolvimento de aplicações web, sites responsivos, trabalhei principalmente com desenvolvimento front-end.</p>
-										</div>
-									</article>
-									<article class="timeline-box right custom-box-shadow-2">
-										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
-											<span class="from text-color-dark text-uppercase">
-												Dê
-												<span class="font-weight-semibold">Mai/2016</span>
-											</span>
-											<span class="to text-color-dark text-uppercase">
-												Até
-												<span class="font-weight-semibold">Atual</span>
-											</span>
-											<p class="text-color-dark">(3 Years 9 Months)</p>
-											<span class="company text-color-dark font-weight-semibold">
-												Novacia
-												<!-- <span class="company-location text-color-dark font-weight-normal text-uppercase"></span> -->
-											</span>
-										</div>
-										<div class="experience-description col-md-9 col-sm-7 match-height background-color-light">
-											<h4 class="text-color-dark font-weight-semibold">Assistente Web</h4>
-											<p class="custom-text-color-2">Auxiliando no desenvolvimento de e-mail marketing e sites funcionais, responsivos, sob medida para nossos clientes.</p>
-										</div>
-									</article>
+									<?php } ?>
 									<div class="timeline-bar"></div>
 								</div>
 							</section>
 						</div>
 					</div>
+					
 				</div>
 			</section>
 
@@ -405,33 +367,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold m-none">Educação</h2>
+							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold m-none">Educa��o</h2>
 							<div class="owl-carousel nav-bottom custom-carousel-style-1 custom-item-padding custom-dots-style-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
 								<div>
+									<?php foreach ($detalhes_educacao as $educacao) { ?>
 									<div class="col-md-4 col-sm-6">
 										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
 											<i class="icon-graduation icons text-color-primary"></i>
-											<h4 class="font-weight-semibold text-color-dark m-none">Fatec São Roque</h4>
-											<p class="custom-text-color-2 mb-xs">Sistemas para Internet </p>
-											<strong class="text-color-primary">2014-2016</strong>
+											<h4 class="font-weight-semibold text-color-dark m-none"><?=$educacao->instituicao?></h4>
+											<p class="custom-text-color-2 mb-xs"><?=$educacao->curso?> </p>
+											<strong class="text-color-primary"><?=date('Y', strtotime($exp->data_saida))."-".date('Y', strtotime($exp->data_saida))?></strong>
 										</div>
 									</div>
-									<div class="col-md-4 col-sm-6">
-										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
-											<i class="icon-graduation icons text-color-primary"></i>
-											<h4 class="font-weight-semibold text-color-dark m-none">Etec São Roque</h4>
-											<p class="custom-text-color-2 mb-xs">Técnico em Informática</p>
-											<strong class="text-color-primary">2009-2010</strong>
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-6">
-										<div class="custom-box-details-2 background-color-light custom-box-shadow-3">
-											<i class="icon-graduation icons text-color-primary"></i>
-											<h4 class="font-weight-semibold text-color-dark m-none">E.E Prof Roque Bastos</h4>
-											<p class="custom-text-color-2 mb-xs">Ensino Fundamental e Médio</p>
-											<strong class="text-color-primary">2004-2010</strong>
-										</div>
-									</div>
+									<?php } ?>
 								</div>
 							</div>
 						</div>
