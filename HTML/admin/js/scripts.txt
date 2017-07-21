@@ -1,0 +1,9 @@
+metisMenu
+slimscroll
+inspinia
+pace
+datapicker
+jquery
+bootstrap
+footable
+popover

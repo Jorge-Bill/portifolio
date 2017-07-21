@@ -4,3 +4,7 @@
 HTML/ftpsync.settings
 
 HTML/php/enviar-email.php
+
+HTML/admin/bd.sql
+
+HTML/admin/php/link-banco.php

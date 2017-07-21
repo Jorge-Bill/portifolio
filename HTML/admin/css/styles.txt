@@ -1,0 +1,10 @@
+bootstrap
+font-awesome
+animate
+style
+jquery
+bootstrap
+datapicker
+dataTables
+footable
+popover
