@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Basic -->
+		<!-- Basic  -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
 		<title>Jorge Mendes | Desenvolvedor Web </title>	
-		<?php 
+		<?php
 			require_once 'php/link-banco.php';
+			// require_once 'php/consultas/detalhes-perfil.php'; 
 			require_once 'php/consultas/detalhes-sobre.php';
 			require_once 'php/consultas/detalhes-experiencia.php';
 			require_once 'php/consultas/detalhes-educacao.php';
+			require_once 'php/consultas/detalhes-habilidades.php';
+			require_once 'php/consultas/detalhes-portifolio.php';
+			require_once 'php/consultas/detalhes-recomendacoes.php';
+			require_once 'php/consultas/detalhes-colaboradores.php';
 		 ?>
 		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
@@ -200,11 +205,11 @@
 							<h1 class="text-color-primary custom-font-size-1">Jorge Mendes</h1>
 							<p class="text-color-light font-weight-normal custom-font-size-2 custom-margin-bottom-1">Desenvolvedor Web</p>
 							<span class="custom-about-me-infos">
-								<!-- <span class="custom-text-color-1 text-uppercase">Greater New York area</span> -->
+								<!-- <span class="custom-text-color-1 text-uppercase">Atual:</span> -->
 								<span class="custom-text-color-1 text-uppercase mb-md">Assistente Web Novacia</span>
 								<span class="custom-text-color-1 text-uppercase">
-									<strong class="text-color-light">Anterior: </strong>
-									Desenvolvedor Front-End na SRTI
+									<strong class="text-color-light">Anterior:</strong>
+									Estagiário Front-End na SRTI
 									<a data-hash href="#experience" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs ml-sm">Ver Mais</a>
 								</span>
 								<span class="custom-text-color-1 text-uppercase">
@@ -335,14 +340,15 @@
 										<div class="experience-info col-md-3 col-sm-5 match-height background-color-primary">
 											<span class="from text-color-dark text-uppercase">
 												Dê
-												<span class="font-weight-semibold"><?=date('d/m/Y', strtotime($exp->data_entrada))?></span>
+												<span class="font-weight-semibold"><?=$data_inicio = date('d/m/Y', strtotime($exp->data_entrada))?></span>
 											</span>
 											<span class="to text-color-dark text-uppercase">
 												Até
-												<span class="font-weight-semibold"><?=date('d/m/Y', strtotime($exp->data_saida))?></span>
+												<span class="font-weight-semibold"><?=$data_fim = date('d/m/Y', strtotime($exp->data_saida))?></span>
 											</span>
-											<p class="text-color-dark">
-												tempo de permanência</p>
+											<!-- <p class="text-color-dark">
+												
+											</p> -->
 											<span class="company text-color-dark font-weight-semibold">
 												<?=$exp->localizacao?>
 												<span class="company-location text-color-dark font-weight-normal text-uppercase"></span>
@@ -376,7 +382,7 @@
 											<i class="icon-graduation icons text-color-primary"></i>
 											<h4 class="font-weight-semibold text-color-dark m-none"><?=$educacao->instituicao?></h4>
 											<p class="custom-text-color-2 mb-xs"><?=$educacao->curso?> </p>
-											<strong class="text-color-primary"><?=date('Y', strtotime($exp->data_saida))."-".date('Y', strtotime($exp->data_saida))?></strong>
+											<strong class="text-color-primary"><?=date('Y', strtotime($exp->data_saida))." - ".date('Y', strtotime($exp->data_saida))?></strong>
 										</div>
 									</div>
 									<?php } ?>
@@ -393,58 +399,26 @@
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Habilidades</h2>
 							<div class="progress-bars custom-progress-bars">
+							<?php foreach ($detalhes_habilidadesUm as $habilidadesUm) { ?>
 								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>HTML 5</span>
+									<span><?=$habilidadesUm->descricao?></span>
 								</div>
 								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="60%"></div>
+									<div class="progress-bar" data-appear-progress-animation="<?=$habilidadesUm->nivel.'%'?>"></div>
 								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>PHP</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="70%" data-appear-animation-delay="300"></div>
-								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>MySQL</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="70%" data-appear-animation-delay="600"></div>
-								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>CSS</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="90%" data-appear-animation-delay="900"></div>
-								</div>
+							<?php } ?>	
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="progress-bars custom-progress-bars custom-md-margin-top-1">
+								<?php foreach ($detalhes_habilidadesDois as $habilidadesDois) { ?>
 								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>Javascript</span>
+									<span><?=$habilidadesDois->descricao?></span>
 								</div>
 								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="70%"></div>
+									<div class="progress-bar" data-appear-progress-animation="<?=$habilidadesDois->nivel.'%'?>"></div>
 								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>GIT</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="80%" data-appear-animation-delay="300"></div>
-								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>OOP</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="70%" data-appear-animation-delay="600"></div>
-								</div>
-								<div class="progress-label text-color-dark font-weight-semibold text-uppercase text-sm">
-									<span>Bootstrap</span>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" data-appear-progress-animation="90%" data-appear-animation-delay="900"></div>
-								</div>
+							<?php } ?>	
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6 col-xs-12">
@@ -452,11 +426,11 @@
 								<h4 class="text-color-dark">Idiomas</h4>
 								<ul class="custom-list-style-1 p-none">
 									<li>
-										<span class="font-weight-semibold custom-max-width-1 text-color-dark"><img src="img/blank.gif" class="flag flag-us mr-xs" alt="English">InglÃªs</span>
-										<span class="custom-text-color-2">AvanÃ§ado</span>
+										<span class="font-weight-semibold custom-max-width-1 text-color-dark"><img src="img/blank.gif" class="flag flag-us mr-xs" alt="English">Inglês</span>
+										<span class="custom-text-color-2">Avançado</span>
 									</li>
 									<li>
-										<span class="font-weight-semibold custom-max-width-1 text-color-dark"><img src="img/blank.gif" class="flag flag-es mr-xs" alt="Spanish">Espanhol:</span>
+										<span class="font-weight-semibold custom-max-width-1 text-color-dark"><img src="img/blank.gif" class="flag flag-es mr-xs" alt="Spanish">Espanhol</span>
 										<span class="custom-text-color-2">Basico</span>
 									</li>
 									<!-- <li>
@@ -473,8 +447,8 @@
 			<section id="portfolio" class="section section-no-border background-color-secondary m-none">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12">
-							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">PortfÃ³lio</h2>
+						<div class="col-md-12">	
+							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">Portfólio</h2>
 							<ul class="nav nav-pills sort-source custom-nav-sort mb-xlg" data-sort-id="portfolio" data-option-key="filter">
 								<!-- <li data-option-value="*" class="active"><a href="#">Show All</a></li> -->
 								<li data-option-value=".websites" class="active"><a href="#">Websites</a></li>
@@ -484,105 +458,24 @@
 							<div class="row">
 								<div class="sort-destination-loader sort-destination-loader-showing">
 									<ul class="image-gallery sort-destination lightbox" data-sort-id="portfolio" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
+									<?php foreach ($detalhes_portifolio as $portifolio) { ?>
 										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
 											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-1_full.png" class="lightbox-portfolio">
+												<a href="img/portfolio/<?=$portifolio->imagem_full?>" class="lightbox-portfolio">
 													<span class="thumb-info custom-thumb-info-1">
 														<span class="thumb-info-wrapper">
 															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-1.jpg" class="img-responsive" alt="">
+															<img src="img/portfolio/<?=$portifolio->imagem_thumb?>" class="img-responsive" alt="">
 														</span>
 													</span>
 												</a>
 											</div>
 										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-2_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-2.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-3_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-3.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-4_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-4.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-5_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-5.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-6_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-6.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-7_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-7.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
-										<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
-											<div class="image-gallery-item">
-												<a href="img/portfolio/portfolio-8_full.png" class="lightbox-portfolio">
-													<span class="thumb-info custom-thumb-info-1">
-														<span class="thumb-info-wrapper">
-															<span class="thumb-info-plus"></span>
-															<img src="img/portfolio/portfolio-8.jpg" class="img-responsive" alt="">
-														</span>
-													</span>
-												</a>
-											</div>
-										</li>
+									<?php } ?>
 									</ul>
 								</div>
 							</div>
+					
 						</div>
 					</div>
 				</div>
@@ -592,34 +485,24 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">RecomendaÃ§Ãµes</h2>
+							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">Recomendações</h2>
 						</div>
 						<div class="col-md-12 p-none">
 							<div class="owl-carousel custom-dots-style-1 custom-dots-color-1 custom-dots-position-1 mb-none" data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}">
+								<?php foreach ($detalhes_recomendacoes as $recomendacoes) { ?>
 								<div>
 									<div class="col-md-12">
 										<div class="testimonial custom-testimonial-style-1 testimonial-with-quotes mb-none">
 											<blockquote class="pb-sm">
-												<p class="custom-text-color-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nulla tortor, a imperdiet enim tristique nec. Nulla lobortis leo eget metus dapibus sodales. Sed placerat vitae dui vitae vehicula. Quisque in tincidunt ligula, nec dignissim arcu. Praesent aliquam velit vel libero dictum, non sollicitudin lectus mollis. Morbi sollicitudin auctor gravida.</p>
+												<p class="custom-text-color-3"><?=$recomendacoes->descricao?></p>
 											</blockquote>
 											<div class="testimonial-author pull-left">
-												<p><strong class="text-uppercase">Bob Doe</strong><span class="custom-text-color-3">Director of Engineering</span></p>
+												<p><strong class="text-uppercase"><?=$recomendacoes->nome?></strong><span class="custom-text-color-3"><?=$recomendacoes->cargo?></span></p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div>
-									<div class="col-md-12">
-										<div class="testimonial custom-testimonial-style-1 testimonial-with-quotes mb-none">
-											<blockquote class="pb-sm">
-												<p class="custom-text-color-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nulla tortor, a imperdiet enim tristique nec. Nulla lobortis leo eget metus dapibus sodales. Sed placerat vitae dui vitae vehicula. Quisque in tincidunt ligula, nec dignissim arcu. Praesent aliquam velit vel libero dictum, non sollicitudin lectus mollis. Morbi sollicitudin auctor gravida.</p>
-											</blockquote>
-											<div class="testimonial-author pull-left">
-												<p><strong class="text-uppercase">Bob Doe</strong><span class="custom-text-color-3">Director of Engineering</span></p>
-											</div>
-										</div>
-									</div>
-								</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
@@ -629,7 +512,6 @@
 			<section id="colaboradores" class="section section-no-border custom-background-color-1 m-none">
 				<div class="container">
 					<h2><strong>Colaboradores</strong></h2>
-		
 					<ul class="nav nav-pills sort-source custom-nav-sort mb-xlg" data-sort-id="team" data-option-key="filter">
 						<li data-option-value="*" class="active"><a href="#">Todos</a></li>
 						<!-- <li data-option-value=".leadership"><a href="#">Leadership</a></li>
@@ -637,181 +519,35 @@
 						<li data-option-value=".development"><a href="#">Development</a></li>
 						<li data-option-value=".design"><a href="#">Design</a></li> -->
 					</ul>
-
-					<!-- <hr> -->
-
 					<div class="row">
-
 						<div class="sort-destination-loader sort-destination-loader-showing">
 							<ul class="team-list sort-destination" data-sort-id="team">
+							<?php foreach ($detalhes_colaboradores as $colaboradores) { ?>
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item leadership">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
 											<img src="img/rapha.jpg" class="img-responsive" alt="">
 											<span class="thumb-info-title">
-												<span class="thumb-info-inner">RAPHAEL PERRIOLLAT</span>
-												<span class="thumb-info-type">Web developer & designer</span>
+												<span class="thumb-info-inner"><?=$colaboradores->nome?></span>
+												<span class="thumb-info-type"><?=$colaboradores->funcao?></span>
 											</span>
 										</span>
 										<span class="thumb-info-caption">
-											<span class="thumb-info-caption-text">Um cara com mais de 2 metros que trocou as quadras por um computador e as jogadas por cÃ³digos.</span>
+											<span class="thumb-info-caption-text"><?=$colaboradores->descricao?></span>
 											<span class="thumb-info-social-icons">
-												<a target="_blank" href="https://www.facebook.com/perriollat"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a target="_blank" href="https://twitter.com/raphaperriollat/"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a target="_blank" href="http://perriollat.com/"><i class="fa fa-link"></i><span>Linkedin</span></a>
+												<a target="_blank" href="<?=$colaboradores->facebook?>"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+												<a target="_blank" href="<?=$colaboradores->twitter?>"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a target="_blank" href="<?=$colaboradores->site?>"><i class="fa fa-link"></i><span>Site</span></a>
 											</span>
 										</span>
 									</span>
 								</li>
-								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
-									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
-										<span class="thumb-info-wrapper">
-											<img src="img/team-2.jpg" class="img-responsive" alt="">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Parceiro(a)</span>
-												<span class="thumb-info-type">Marketing</span>
-											</span>
-										</span>
-										<span class="thumb-info-caption">
-											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
-											<span class="thumb-info-social-icons">
-												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
-											</span>
-										</span>
-									</span>
-								</li>
-								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
-									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
-										<span class="thumb-info-wrapper">
-											<img src="img/team-2.jpg" class="img-responsive" alt="">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Parceiro(a)</span>
-												<span class="thumb-info-type">Marketing</span>
-											</span>
-										</span>
-										<span class="thumb-info-caption">
-											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
-											<span class="thumb-info-social-icons">
-												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
-											</span>
-										</span>
-									</span>
-								</li>
-								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item marketing">
-									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
-										<span class="thumb-info-wrapper">
-											<img src="img/team-2.jpg" class="img-responsive" alt="">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Parceiro(a)</span>
-												<span class="thumb-info-type">Marketing</span>
-											</span>
-										</span>
-										<span class="thumb-info-caption">
-											<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
-											<span class="thumb-info-social-icons">
-												<a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-												<a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-												<a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
-											</span>
-										</span>
-									</span>
-								</li>
+							<?php } ?>	
 							</ul>
 						</div>
 					</div>
 				</div>		
 			</section>
-
-			<!-- <section id="blog" class="section section-no-border background-color-light m-none">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h2 class="text-color-quaternary font-weight-extra-bold text-uppercase">My Blog</h2>
-						</div>
-						<div class="col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 custom-sm-margin-bottom-1">
-							<article class="thumb-info custom-thumb-info-2 custom-box-shadow-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0" data-appear-animation-duration="1s">
-								<span class="thumb-info-wrapper">
-									<a href="#">
-										<img src="img/blog/blog-1.jpg" alt class="img-responsive" />
-									</a>
-								</span>
-								<span class="thumb-info-caption">
-									<span class="thumb-info-caption-text">
-										<h4 class="mb-sm">
-											<a href="#" class="text-decoration-none text-color-dark font-weight-semibold">
-												Design Driven
-											</a>
-										</h4>
-										<p class="custom-text-color-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nulla tortor, a imperdiet enim tristique nec. Nulla lobortis leo eget metus dapib...</p>
-									</span>
-									<hr class="solid m-none mt-xlg mb-sm">
-									<span class="custom-blog-post-date text-uppercase font-weight-semibold text-color-dark">
-										July 12-2017
-									</span>
-									<span class="custom-blog-post-share text-uppercase font-weight-semibold text-color-dark">
-										Share:
-										<ul>
-											<li>
-												<a class="item-facebook text-decoration-none" href="#" class="text-uppercase" title="Share on Facebook">Facebook</a>
-											</li>
-											<li>
-												<a class="item-twitter text-decoration-none" href="#" class="text-uppercase" title="Share on Twitter">Twitter</a>
-											</li>
-											<li>
-												<a class="item-google-plus text-decoration-none" href="#" class="text-uppercase" title="Share on Google Plus">Google Plus</a>
-											</li>
-										</ul>
-									</span>
-								</span>
-							</article>
-						</div>
-						<div class="col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0">
-							<article class="thumb-info custom-thumb-info-2 custom-box-shadow-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0" data-appear-animation-duration="1s">
-								<span class="thumb-info-wrapper">
-									<a href="#">
-										<img src="img/blog/blog-2.jpg" alt class="img-responsive" />
-									</a>
-								</span>
-								<span class="thumb-info-caption">
-									<span class="thumb-info-caption-text">
-										<h4 class="mb-sm">
-											<a href="#" class="text-decoration-none text-color-dark font-weight-semibold">
-												UI, UX Concepts
-											</a>
-										</h4>
-										<p class="custom-text-color-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nulla tortor, a imperdiet enim tristique...</p>
-									</span>
-									<hr class="solid m-none mt-xlg mb-sm">
-									<span class="custom-blog-post-date text-uppercase font-weight-semibold text-color-dark">
-										July 12-2017
-									</span>
-									<span class="custom-blog-post-share text-uppercase font-weight-semibold text-color-dark">
-										Share:
-										<ul>
-											<li>
-												<a class="item-facebook text-decoration-none" href="#" class="text-uppercase" title="Share on Facebook">Facebook</a>
-											</li>
-											<li>
-												<a class="item-twitter text-decoration-none" href="#" class="text-uppercase" title="Share on Twitter">Twitter</a>
-											</li>
-											<li>
-												<a class="item-google-plus text-decoration-none" href="#" class="text-uppercase" title="Share on Google Plus">Google Plus</a>
-											</li>
-										</ul>
-									</span>
-								</span>
-							</article>
-						</div>
-						<div class="col-md-12 col-sm-12 pt-xlg mt-xlg center">
-							<a class="btn btn-primary btn-borders text-color-dark custom-btn-style-2 font-weight-bold custom-border-radius-1 text-uppercase">View All</a>
-						</div>
-					</div>
-				</div>
-			</section> -->
 
 			<div id="say-hello" class="container-fluid">
 				<div class="row">
@@ -819,17 +555,17 @@
 						<section class="section section-no-border match-height background-color-primary m-none">
 							<div class="row m-none">
 								<div class="col-half-section col-half-section-right mr-md">
-									<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Diga olÃ¡</h2>
+									<h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Diga olá</h2>
 									<form id="callSendMessage" class="custom-form-style" action="php/enviar-email.php" method="POST">
 										<div class="form-content">
 											<div class="form-control-custom">
-												<input type="text" class="form-control" name="nome" placeholder="Nome *" data-msg-required="Campo ObrigatÃ³rio" id="nome" required="" />
+												<input type="text" class="form-control" name="nome" placeholder="Nome *" data-msg-required="Campo Obrigatório" id="nome" required="" />
 											</div>
 											<div class="form-control-custom">
-												<input type="text" class="form-control" name="email" placeholder="E-mail *" data-msg-required="Campo ObrigatÃ³rio" id="email" required="" />
+												<input type="text" class="form-control" name="email" placeholder="E-mail *" data-msg-required="Campo Obrigatório" id="email" required="" />
 											</div>
 											<div class="form-control-custom">
-												<input type="text" class="form-control" name="assunto" placeholder="Assunto *" data-msg-required="Campo ObrigatÃ³rio" id="assunto" required="" />
+												<input type="text" class="form-control" name="assunto" placeholder="Assunto *" data-msg-required="Campo Obrigatório" id="assunto" required="" />
 											</div>
 											<div class="form-control-custom">
 												<textarea maxlength="5000" data-msg-required="Mensagem." rows="10" class="form-control" name="mensagem" placeholder="Mensagem *" id="mensagem" required="" aria-required="true"></textarea>
@@ -911,7 +647,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12 m-none">
-								<p class="custom-text-color-2">Â© Copyright 2017. Todos os direitos reservados.</p>
+								<p class="custom-text-color-2">© Copyright - Jorge <?php echo date('Y') ?>. Todos os direitos reservados.</p>
 							</div>
 						</div>
 					</div>
