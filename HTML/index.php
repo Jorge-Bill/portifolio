@@ -8,14 +8,8 @@
 		<title>Jorge Mendes | Desenvolvedor Web </title>	
 		<?php
 			require_once 'php/link-banco.php';
-			// require_once 'php/consultas/detalhes-perfil.php'; 
-			require_once 'php/consultas/detalhes-sobre.php';
-			require_once 'php/consultas/detalhes-experiencia.php';
-			require_once 'php/consultas/detalhes-educacao.php';
-			require_once 'php/consultas/detalhes-habilidades.php';
-			require_once 'php/consultas/detalhes-portifolio.php';
-			require_once 'php/consultas/detalhes-recomendacoes.php';
-			require_once 'php/consultas/detalhes-colaboradores.php';
+			require_once 'php/consultas/detalhes-consultas.php';
+			require_once 'php/alerta.php';
 		 ?>
 		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
@@ -552,6 +546,7 @@
 			<div id="say-hello" class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 p-none">
+						<?php alerta(); ?>
 						<section class="section section-no-border match-height background-color-primary m-none">
 							<div class="row m-none">
 								<div class="col-half-section col-half-section-right mr-md">
@@ -561,7 +556,10 @@
 											<div class="form-control-custom">
 												<input type="text" class="form-control" name="nome" placeholder="Nome *" data-msg-required="Campo Obrigatório" id="nome" required="" />
 											</div>
-											<div class="form-control-custom">
+											<div class="form-control-custom col-md-4">
+												<input type="text" class="form-control" name="telefone" placeholder="Telefone *" data-msg-required="Campo Obrigatório" id="telefone" required="" />
+											</div>
+											<div class="form-control-custom col-md-8">
 												<input type="text" class="form-control" name="email" placeholder="E-mail *" data-msg-required="Campo Obrigatório" id="email" required="" />
 											</div>
 											<div class="form-control-custom">
@@ -570,7 +568,7 @@
 											<div class="form-control-custom">
 												<textarea maxlength="5000" data-msg-required="Mensagem." rows="10" class="form-control" name="mensagem" placeholder="Mensagem *" id="mensagem" required="" aria-required="true"></textarea>
 											</div>
-											<input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Enviar" />
+											<input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Enviar" name="enviar" />
 										</div>
 									</form>
 								</div>
@@ -690,20 +688,6 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
-
-		
-		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-			ga('create', 'UA-12345678-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-		 -->
-
 
 	</body>
 </html>
