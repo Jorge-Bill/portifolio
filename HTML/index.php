@@ -24,8 +24,8 @@
 		<meta property="og:image:height" content="600"> 
 		<meta property="og:type" content="website">
 		
-		<meta name="keywords" content="Desenvolvedor, Desenvolvimento Web, CriaÃ§Ã£o de sites, HTML5, Javascript, PHP, Front-end " />
-		<meta name="description" content="Me conheÃ§a, veja minhas habilidades e trabalhos realizados.">
+		<meta name="keywords" content="Desenvolvedor, Desenvolvimento Web, Criação de sites, HTML5, Javascript, PHP, Front-end " />
+		<meta name="description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
 		<meta name="author" content="jorge">
 
 		<!-- Social -->
@@ -556,10 +556,10 @@
 											<div class="form-control-custom">
 												<input type="text" class="form-control" name="nome" placeholder="Nome *" data-msg-required="Campo Obrigatório" id="nome" required="" />
 											</div>
-											<div class="form-control-custom col-md-4">
+											<div class="form-control-custom">
 												<input type="text" class="form-control" name="telefone" placeholder="Telefone *" data-msg-required="Campo Obrigatório" id="telefone" required="" />
 											</div>
-											<div class="form-control-custom col-md-8">
+											<div class="form-control-custom">
 												<input type="text" class="form-control" name="email" placeholder="E-mail *" data-msg-required="Campo Obrigatório" id="email" required="" />
 											</div>
 											<div class="form-control-custom">
