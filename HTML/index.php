@@ -17,7 +17,7 @@
 		<meta property="og:url" content="http://www.jorgemendes.com.br">
 		<meta property="og:title" content="Jorge Mendes | Desenvolvedor Web ">
 		<meta property="og:site_name" content="Jorge Mendes">
-		<meta property="og:description" content="Me conheÃ§a, veja minhas habilidades e trabalhos realizados.">
+		<meta property="og:description" content="Me conheça, veja minhas habilidades e trabalhos realizados.">
 		<meta property="og:image" content="http://www.jorgemendes.com.br/img/social.jpg">
 		<meta property="og:image:type" content="image/jpg">
 		<meta property="og:image:width" content="800"> 
