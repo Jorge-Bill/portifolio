@@ -5,8 +5,9 @@ Google Adsense: User-agent: Mediapartners-Google
 Yahoo: 			User-agent: Slurp
 Bing: 			User-agent: Bingbot
 
+User-agent: *
 Disallow: 					/php/ 
 Disallow: 					/documentos/
-Allow: 			
+Disallow:					/admin/		
 
 Sitemap: http://www.jorgemendes.com.br/sitemap.xml  
