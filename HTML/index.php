@@ -96,7 +96,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo, um quadrado amarelo formando um rosto"></a> -->
+						<a class="navbar-brand" href="index.html"><img src="img/logo-oficialMini.jpg" alt="logo, um quadrado azul formando um rosto"></a>
 					</div>
 					<div class="collapse navbar-collapse navbar-perfil">
 						<ul class="nav navbar-nav">
@@ -343,6 +343,7 @@
 											<!-- <p class="text-color-dark">
 												
 											</p> -->
+											<hr/>
 											<span class="company text-color-dark font-weight-semibold">
 												<?=$exp->localizacao?>
 												<span class="company-location text-color-dark font-weight-normal text-uppercase"></span>
@@ -376,7 +377,7 @@
 											<i class="icon-graduation icons text-color-primary"></i>
 											<h4 class="font-weight-semibold text-color-dark m-none"><?=$educacao->instituicao?></h4>
 											<p class="custom-text-color-2 mb-xs"><?=$educacao->curso?> </p>
-											<strong class="text-color-primary"><?=date('Y', strtotime($exp->data_saida))." - ".date('Y', strtotime($exp->data_saida))?></strong>
+											<strong class="text-color-primary"><?=date('Y', strtotime($educacao->data_entrada))." - ".date('Y', strtotime($educacao->data_saida))?></strong>
 										</div>
 									</div>
 									<?php } ?>
