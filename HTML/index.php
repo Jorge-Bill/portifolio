@@ -10,6 +10,7 @@
 			require_once 'php/link-banco.php';
 			require_once 'php/consultas/detalhes-consultas.php';
 			require_once 'php/alerta.php';
+
 		 ?>
 		<!-- Social -->
 		<meta property="og:locale" content="pt_BR">
@@ -188,27 +189,26 @@
 			</header>
 
 			<div role="main" class="main">
-
 			<section id="about-me" class="section section-no-border section-parallax custom-section-padding-1 custom-position-1 custom-xs-bg-size-cover m-none" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="#">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-10 col-sm-offset-0 col-xs-offset-1 custom-sm-margin-bottom-1">
-							<img src="img/img-perfil.jpg" class="img-responsive custom-border custom-image-position-2 custom-box-shadow-4" alt />
+							<img src="img/<?=$perfil['foto'];?>" class="img-responsive custom-border custom-image-position-2 custom-box-shadow-4" alt="Imagem do perfil" />
 						</div>
 						<div class="col-md-5 col-sm-8">
-							<h1 class="text-color-primary custom-font-size-1">Jorge Mendes</h1>
-							<p class="text-color-light font-weight-normal custom-font-size-2 custom-margin-bottom-1">Desenvolvedor Web</p>
+							<h1 class="text-color-primary custom-font-size-1"><?=$perfil['nome'];?></h1>
+							<p class="text-color-light font-weight-normal custom-font-size-2 custom-margin-bottom-1"><?=$perfil['cargo'];?></p>
 							<span class="custom-about-me-infos">
 								<!-- <span class="custom-text-color-1 text-uppercase">Atual:</span> -->
-								<span class="custom-text-color-1 text-uppercase mb-md">Assistente Web Novacia</span>
+								<span class="custom-text-color-1 text-uppercase mb-md"><?=$perfil['ocupacaoAtual'];?></span>
 								<span class="custom-text-color-1 text-uppercase">
 									<strong class="text-color-light">Anterior:</strong>
-									Estagiário Front-End na SRTI
+									<?=$perfil['ocupacaoAnterior'];?>
 									<a data-hash href="#experience" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs ml-sm">Ver Mais</a>
 								</span>
 								<span class="custom-text-color-1 text-uppercase">
 									<strong class="text-color-light">Educação: </strong>
-									Fatec São Roque
+									<?=$perfil['educacao'];?>
 									<a data-hash href="#education" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-xs ml-sm">Ver Mais</a>
 								</span>
 							</span>
@@ -220,7 +220,7 @@
 				</div>
 				<ul class="social-icons custom-social-icons">
 					<li class="social-icons-facebook">
-						<a href="https://www.facebook.com/jorgebill.silva" target="_blank" title="Facebook">
+						<a href="<?=$perfil['facebook'];?>" target="_blank" title="Facebook">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
@@ -249,7 +249,7 @@
 							</a>
 						</div>
 						<div class="col-md-2 col-sm-4 center custom-xs-border-bottom p-none">
-							<a data-hash href="#say-hello" class="text-decoration-none">
+							<a data-hash href="mailto:<?=$perfil['email'];?>" class="text-decoration-none">
 								<span class="custom-nav-button custom-divisors text-color-dark">
 									<i class="icon-envelope-open icons text-color-primary"></i>
 									Enviar E-mail	
@@ -295,7 +295,7 @@
 									<ul class="custom-list-style-1 p-none">
 										<li>
 											<span class="text-color-dark">Linkedin:</span>
-											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="<?=ucwords(strtolower($sobre->linkedin));?>">Jorge Mendes</a></span>
+											<span class="custom-text-color-2"><a style="text-decoration: none;" class="custom-text-color-2" target="_blank" href="<?=ucwords(strtolower($sobre->linkedin));?>"><?=ucwords(strtolower($sobre->nome));?></a></span>
 										</li>
 										<li>
 											<span class="text-color-dark">GitHub:</span>
@@ -303,7 +303,7 @@
 										</li>
 										<li>
 											<!-- <span class="text-color-dark" style="font-size: 8px">E-mail:</span> -->
-											<span class="custom-text-color-2">E-mail: <a style="font-size:10px;text-decoration: none;" class="custom-text-color-2" href="mailto:<?=ucwords(strtolower($sobre->email));?>">contato@jorgemendes.com.br</a></span>
+											<span class="custom-text-color-2">E-mail: <a style="font-size:10px;text-decoration: none;" class="custom-text-color-2" href="mailto:<?=ucwords(strtolower($sobre->email));?>"><?=strtolower($sobre->email)?></a></span>
 										</li>
 									</ul>
 								</div>
@@ -521,7 +521,7 @@
 								<li class="col-md-3 col-sm-6 col-xs-12 isotope-item leadership">
 									<span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
 										<span class="thumb-info-wrapper">
-											<img src="img/rapha.jpg" class="img-responsive" alt="">
+											<img src="img/<?=$colaboradores->imagem?>" class="img-responsive" alt="<?=$colaboradores->nome?>" width="585" height="585">
 											<span class="thumb-info-title">
 												<span class="thumb-info-inner"><?=$colaboradores->nome?></span>
 												<span class="thumb-info-type"><?=$colaboradores->funcao?></span>
@@ -602,7 +602,7 @@
 											</span>
 										</span>
 									</a> -->
-									<a target="_blank" style="text-decoration: none;" href="https://www.linkedin.com/in/jorge-mendes-83a572a7" class="text-decoration-none">
+									<a target="_blank" style="text-decoration: none;" href="<?=$perfil['linkedin'];?>" class="text-decoration-none">
 										<span class="feature-box custom-feature-box mb-xlg">
 											<span class="custom-feature-box-icon">
 												<i class="icon-social-linkedin icons text-color-light"></i>
@@ -617,18 +617,18 @@
 										<span class="custom-feature-box-icon">
 											<i class="icon-share icons text-color-light"></i>
 										</span>
-										<a target="_blank" href="https://www.facebook.com/jorgebill.silva" class="text-decoration-none">
+										<a target="_blank" href="<?=$perfil['facebook'];?>" class="text-decoration-none">
 											<span class="feature-box-info">
 												<label class="font-weight-semibold text-uppercase custom-text-color-1">Me acompanhe</label>
 												<strong class="font-weight-light text-color-light custom-opacity-effect-1">Facebook</strong>
 											</span>
 										</a>
-										<a target="_blank" href="https://www.instagram.com/jorgebillsilva/" class="text-decoration-none">
+										<a target="_blank" href="<?=$perfil['instagram'];?>" class="text-decoration-none">
 											<span class="feature-box-info custom-both-side-border">
 												<strong class="font-weight-light text-color-light custom-opacity-effect-1">Instagram</strong>
 											</span>
 										</a>
-										<a target="_blank" href="https://github.com/Jorge-Bill/" class="text-decoration-none hidden-sm hidden-xs">
+										<a target="_blank" href="<?=$perfil['github'];?>" class="text-decoration-none hidden-sm hidden-xs">
 											<span class="feature-box-info p-none">
 												<strong class="font-weight-light text-color-light custom-opacity-effect-1">GitHub</strong>
 											</span>

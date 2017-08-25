@@ -8,7 +8,8 @@
 		colaboradores.descricao 		AS descricao,
 		colaboradores.facebook 			AS facebook,
 		colaboradores.twitter 			AS twitter,
-		colaboradores.site 				AS site
+		colaboradores.site 				AS site,
+		colaboradores.imagem 			AS imagem
 		
 		FROM colaboradores
 
@@ -85,9 +86,27 @@
 		pessoa.facebook	 				AS facebook,
 		pessoa.instagram 				AS instagram,
 		pessoa.github	 				AS github,
-		pessoa.email	 				AS email
+		pessoa.email	 				AS email,
+		pessoa.nome 					AS nome
 
 		FROM pessoa");
+
+	$detalhes_perfil = $pdo -> prepare("SELECT
+		perfil.id 					AS id,
+		perfil.nome 				AS nome,
+		perfil.foto 				AS foto,
+		perfil.cargo 				AS cargo,
+		perfil.email 				AS email,
+		perfil.linkedin 			AS linkedin,
+		perfil.facebook 			AS facebook,
+		perfil.github 				AS github,
+		perfil.instagram 			AS instagram,
+		perfil.ocupacaoAtual 		AS ocupacaoAtual,
+		perfil.ocupacaoAnterior 	AS ocupacaoAnterior,
+		perfil.educacao 			AS educacao
+		
+		FROM perfil");
+
 
 	$detalhes_colaboradores 			-> execute();
 	$detalhes_colaboradores 			= $detalhes_colaboradores->fetchAll(PDO::FETCH_OBJ);
@@ -112,5 +131,8 @@
 
 	$detalhes_sobre 					-> execute();
 	$detalhes_sobre						=  $detalhes_sobre->fetchAll(PDO::FETCH_OBJ);
+
+	$detalhes_perfil 					-> execute();
+	$perfil = $detalhes_perfil 			=  $detalhes_perfil->fetch(PDO::FETCH_ASSOC);
 
 ?>
