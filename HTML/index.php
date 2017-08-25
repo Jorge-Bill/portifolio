@@ -249,7 +249,7 @@
 							</a>
 						</div>
 						<div class="col-md-2 col-sm-4 center custom-xs-border-bottom p-none">
-							<a data-hash href="mailto:<?=$perfil['email'];?>" class="text-decoration-none">
+							<a href="mailto:<?=$perfil['email'];?>" class="text-decoration-none">
 								<span class="custom-nav-button custom-divisors text-color-dark">
 									<i class="icon-envelope-open icons text-color-primary"></i>
 									Enviar E-mail	
@@ -580,7 +580,7 @@
 						<section class="section section-no-border match-height m-none" style="background: url(img/contato.png); background-size: cover; background-color: #000;">
 							<div class="row m-none">
 								<div class="col-half-section col-half-section-left ml-md">
-									<a href="mailto:you@domain.com" class="text-decoration-none">
+									<a href="<?=$perfil['email'];?>" class="text-decoration-none">
 										<span class="feature-box custom-feature-box mb-xlg">
 											<span class="custom-feature-box-icon">
 												<i class="icon-envelope icons text-color-light"></i>
