@@ -101,15 +101,15 @@
 					</div>
 					<div class="collapse navbar-collapse navbar-perfil">
 						<ul class="nav navbar-nav">
-							<li><a href="#topo">Home</a></li>
-							<li><a href="#about-me">Sobre</a></li>
-							<li><a href="#experience">Experiência</a></li>
-							<li><a href="#education">Educação</a></li>
-							<li><a href="#skills">Habilidades</a></li>
-							<li><a href="#portfolio">Portifóio</a></li>
-							<li><a href="#recommendations">Recomendações</a></li>
-							<li><a href="#colaboradores">Colaboradores</a></li>
-							<li><a href="#say-hello">Diga olá</a></li>
+							<li><a data-hash href="#topo">Home</a></li>
+							<li><a data-hash href="#about-me">Sobre</a></li>
+							<li><a data-hash href="#experience">Experiência</a></li>
+							<li><a data-hash href="#education">Educação</a></li>
+							<li><a data-hash href="#skills">Habilidades</a></li>
+							<li><a data-hash href="#portfolio">Portifóio</a></li>
+							<li><a data-hash href="#recommendations">Recomendações</a></li>
+							<li><a data-hash href="#colaboradores">Colaboradores</a></li>
+							<li><a data-hash href="#say-hello">Diga olá</a></li>
 						</ul>
 					</div>
 				</div>
